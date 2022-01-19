@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+body{
+    background: #0b1826;
+  
+    position: relative;
+    height: 100vh;
+}
+.source-code{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.title, .name-company{
+    color:#fff;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right,
+    #462523 0%,
+    #cb9b51 22%,
+    #f6e27a 45%,
+    #f6f2c0 50%,
+    #f6e27a 55%,
+    #cb9b51 78%,
+    #462523 100%
+    );
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box-intership{
+    display: flex;
+    flex-wrap: wrap;
+    --column:2;
+    --spacing:15px;
+    margin-left: calc(calc(var(--spacing) * (-1)));
+    align-items: center;
+}
+.box{
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    margin-left: var(--spacing);
+    margin-bottom: var(--spacing);
+    width: calc(calc(100% / var(--column)) - var(--spacing));
+    position: relative;
+    overflow: hidden;
+}
+.image-box{
+    width: 100%;
+    height: 100%;
+}
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-box{
+   position: absolute;
+   top:-100%;
+   left:0;
+   height: 100%;
+   width: 100%;
+   background: rgba(0,0,0,0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.3s;
+}
+.box:hover .content-box{
+    top:0;
+}
+.infor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fa-caret-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color:#fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-bottom: 20px;
+}
+.name{
+    font-size: 24px;
+    color:#fff;
+    text-decoration: none;
+}
+.name:hover{
+    text-decoration: underline;
+}
